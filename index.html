@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vezha — політика конфіденційності</title>
+<meta name="description" content="Політика конфіденційності застосунку Vezha (IPTV-плеєр) / Vezha privacy policy">
+<style>
+  :root {
+    --bg: #ffffff; --fg: #1b1d21; --muted: #5b616b; --line: #e3e6ea; --accent: #2f6fe0; --card: #f6f7f9;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0e1116; --fg: #e8eaed; --muted: #a4abb6; --line: #262b33; --accent: #7aa7ff; --card: #161a21; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+  h1 { font-size: 1.7rem; margin: 0 0 4px; }
+  h2 { font-size: 1.15rem; margin: 28px 0 8px; }
+  p, li { color: var(--fg); }
+  .muted { color: var(--muted); }
+  a { color: var(--accent); }
+  nav { display: flex; gap: 12px; margin: 12px 0 24px; }
+  nav a { padding: 6px 12px; border: 1px solid var(--line); border-radius: 999px; text-decoration: none; }
+  section { border-top: 1px solid var(--line); padding-top: 8px; margin-top: 32px; }
+  .box { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; }
+  ul { padding-left: 20px; }
+  code { font-size: .92em; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Vezha</h1>
+  <p class="muted">Політика конфіденційності · Privacy policy</p>
+  <nav><a href="#uk">Українська</a><a href="#en">English</a></nav>
+
+  <section id="uk" lang="uk">
+    <h1>Політика конфіденційності</h1>
+    <p class="muted">Набуває чинності: 23 листопада 2026 р.</p>
+
+    <div class="box">
+      <p><strong>Коротко:</strong> Vezha не збирає і не передає розробнику ваших даних, крім перевірки покупки Vezha+ (розділ 2). Немає реєстрації, реклами,
+      аналітики розробника чи звітів про збої. Усе, що ви налаштовуєте, зберігається лише на вашому пристрої. Розробник отримує
+      лише листи, які ви самі вирішите йому надіслати. Єдине, що збирає стороння бібліотека, — анонімна статистика Google Cast
+      для Chromecast (розділ 4).</p>
+    </div>
+
+    <h2>1. Про застосунок</h2>
+    <p>Vezha — плеєр IPTV для Android, Android TV і ТВ-приставок. Застосунок <strong>не містить і не надає каналів</strong>:
+    він відтворює плейлисти (M3U/M3U8, Xtream Codes, портали Stalker / Ministra за MAC-адресою), які ви додаєте самі, — від
+    вашого провайдера або з відкритих джерел.
+    Ця політика описує застосунок «Vezha» (<code>com.vezha.iptv</code>), розробник — Yuriy Nedilsky.</p>
+
+    <h2>2. Які дані збирає розробник</h2>
+    <p>Жодних автоматично, крім перевірки покупки Vezha+ (нижче). Vezha не має облікових записів, не показує рекламу, не
+    містить аналітики, трекерів чи систем звітів про збої.</p>
+    <p>Vezha+ купується через Google Play: оплату обробляє Google за своїми правилами, а розробник не бачить ваших платіжних
+    даних. Якщо ви купили Vezha+, застосунок надсилає на сервер розробника (Google Cloud) токен покупки з Google Play. Сервер
+    питає в Google, чи покупка дійсна і який у вас тариф, і повертає відповідь застосунку. Токен сервер не зберігає; у
+    технічному журналі Google Cloud до 30 днів лишаються лише час запиту й IP-адреса. Якщо ви купуєте «Назавжди», маючи
+    підписку, сервер скасовує підписку через Google Play і повертає гроші за невикористаний час. Результат перевірки
+    застосунок пам'ятає на пристрої.</p>
+    <p>Якщо ви самі напишете розробнику (кнопка «Написати розробнику» в налаштуваннях відкриває ваш поштовий застосунок, а на ТВ
+    показує QR-код із готовим листом), розробник отримає вашу адресу електронної пошти, текст листа і технічні дані в кінці
+    листа: версію Vezha, версію Android і модель пристрою. Їх можна стерти перед надсиланням. Лист використовується лише для
+    відповіді й виправлення помилок, нікому не передається, і його можна попросити видалити.</p>
+
+    <h2>3. Що зберігається на вашому пристрої</h2>
+    <ul>
+      <li>Плейлисти: назви й адреси, а для Xtream Codes — адреса сервера, логін і пароль, які ви ввели; для порталів Stalker —
+        адреса порталу, MAC-адреса, а також логін і пароль, якщо портал їх вимагає.</li>
+      <li>MAC-адреса для порталів Stalker. Vezha створює її один раз випадково, у діапазоні приставок MAG
+        (<code>00:1A:79:…</code>), — це <strong>не</strong> справжня апаратна адреса вашого пристрою. Під час додавання порталу
+        її можна замінити тією, яку дав провайдер.</li>
+      <li>Посилання на телепрограму, обрані й недавні канали, групи, налаштування оформлення та мови.</li>
+      <li>PIN батьківського контролю.</li>
+      <li>Заплановані нагадування й записи з телепрограми.</li>
+      <li>Кеш плейлистів і телепрограми — щоб застосунок швидше відкривався.</li>
+      <li>Записи каналів — лише коли ви вмикаєте запис; зберігаються у вибраному вами місці (пам'ять пристрою, флешка чи папка).</li>
+      <li>Резервні копії налаштувань — лише коли ви їх створюєте; файл зберігається там, де ви вкажете, і містить ваші плейлисти
+        разом із логінами Xtream Codes і даними порталів Stalker (MAC-адреса, логін, пароль), тож зберігайте його обережно.</li>
+    </ul>
+    <p>Ці дані нікуди не передаються розробнику. Їх можна видалити в будь-який момент (див. розділ 8).</p>
+
+    <h2>4. З'єднання з інтернетом</h2>
+    <p>Щоб показувати канали, Vezha з'єднується лише з такими серверами:</p>
+    <ul>
+      <li><strong>Сервери з ваших плейлистів</strong> — щоб завантажити плейлист, телепрограму, логотипи каналів і відтворити потоки.
+        Ваш провайдер бачить вашу IP-адресу та запити так само, як від будь-якого іншого плеєра; на нього поширюється його власна
+        політика конфіденційності.</li>
+      <li><strong>Портали Stalker (Ministra)</strong> — щоб увійти, Vezha представляється порталу приставкою MAG і надсилає
+        MAC-адресу з плейлиста, похідні від неї серійний номер та ідентифікатор пристрою, часовий пояс, а також логін і пароль,
+        якщо ви їх ввели. За MAC-адресою портал розпізнає вашу підписку. Тимчасовий ключ входу, який видає портал, зберігається
+        лише в пам'яті, поки застосунок працює. Поки ви користуєтесь порталом, Vezha час від часу повідомляє йому, що
+        з'єднання активне (як це робить приставка), а через 30 хв без користування перестає. На портал поширюється політика
+        конфіденційності вашого провайдера.</li>
+      <li><strong>Вбудовані джерела телепрограми</strong> — файли телепрограми завантажуються з <code>raw.githubusercontent.com</code>
+        (дзеркало epg.one) та <code>epgshare01.online</code>. Жодних ваших даних туди не надсилається; ці сервери, як і будь-які
+        інші, бачать IP-адресу запиту. Вбудовану телепрограму можна вимкнути в налаштуваннях.</li>
+      <li><strong>Відкритий тестовий плейлист</strong> (<code>iptv-org.github.io</code>) — лише якщо ви самі його оберете.</li>
+      <li><strong>Додавання плейлиста з телефона</strong> — поки відкрите це вікно, ТВ показує тимчасову сторінку у вашій домашній
+        мережі (на ній підставлено MAC-адресу цього пристрою для порталів Stalker). Телефон надсилає посилання, файл чи дані
+        входу прямо на ТВ; нічого не проходить через сервери розробника.</li>
+      <li><strong>Chromecast (Google Cast)</strong> — коли ви самі запускаєте трансляцію, адреса потоку, назва каналу, передачі
+        й логотип передаються на ваш Chromecast у домашній мережі, і він сам відкриває потік. Для цього у Vezha є бібліотека
+        Google Cast (частина Сервісів Google Play); на пристроях із Сервісами Google Play вона працює, навіть коли ви нічого не
+        транслюєте. За словами Google, вона збирає <strong>анонімні</strong> дані про роботу з Cast-пристроями (пошук пристроїв,
+        сеанси, модель пристрою, версії бібліотеки й застосунку), без ідентифікаторів, за якими можна визначити користувача,
+        передає їх зашифрованими лише Google, не передає третім сторонам і використовує в узагальненому вигляді, щоб покращувати
+        Cast. Вимкнути цей збір чи видалити ці дані не можуть ні розробник, ні користувач. Докладно:
+        <a href="https://developers.google.com/cast/docs/android_sender/data_disclosure">опис Google</a>.</li>
+      <li><strong>Синхронізація Vezha+ (Google-диск)</strong> — лише якщо ви самі ввімкнете її в налаштуваннях і дозволите доступ.
+        Плейлисти (разом із логінами Xtream Codes і даними порталів Stalker — MAC-адресою, логіном і паролем), обране, групи й
+        правки списку зберігаються в прихованій
+        теці Vezha на <strong>вашому</strong> Google-диску (вона не видна серед ваших файлів), а також список підключених
+        пристроїв (назва й модель). Vezha отримує доступ лише до цієї теки, не до інших файлів на диску. Дані передаються
+        зашифровано безпосередньо між пристроєм і Google; розробник їх не отримує й не має до них доступу. Зберігає їх Google за
+        своєю <a href="https://policies.google.com/privacy">політикою конфіденційності</a>.</li>
+    </ul>
+    <p>Запити надсилаються із загальним заголовком медіаплеєра (User-Agent) та із заголовками, вказаними у вашому плейлисті.
+    З'єднання за адресами <code>http://</code> не шифруються — це залежить від вашого провайдера.</p>
+
+    <h2>5. Резервне копіювання Android</h2>
+    <p>Якщо на пристрої увімкнено резервне копіювання в обліковий запис Google, Android може зберегти там налаштування Vezha,
+    щоб відновити їх на новому пристрої. Це резервне копіювання здійснює Google, а не розробник; вимкнути його можна в
+    налаштуваннях Android.</p>
+
+    <h2>6. Дозволи</h2>
+    <ul>
+      <li><strong>Інтернет</strong> — щоб завантажувати плейлисти, телепрограму й відтворювати канали.</li>
+      <li><strong>Читання файлів</strong> (Android 12 і старіші) — щоб відкрити вибраний вами плейлист чи
+        резервну копію. На новіших версіях Android файли відкриваються системним вікном вибору.</li>
+      <li><strong>Сповіщення</strong> (Android 13 і новіші) — нагадування про передачі й сповіщення «Іде запис».</li>
+      <li><strong>Будильники й нагадування</strong> — щоб нагадування й запис за розкладом спрацьовували вчасно, навіть коли
+        Vezha закрита.</li>
+      <li><strong>Запуск після ввімкнення пристрою</strong> — щоб відновити розклад нагадувань і записів.</li>
+      <li><strong>Фонова служба й робота процесора під час запису</strong> — щоб запис не обривався, коли застосунок згорнутий
+        чи закритий. Служба працює лише під час запису.</li>
+    </ul>
+    <p>Версія, встановлена не з Google Play (з GitHub), може додатково просити «Доступ до всіх файлів» (для провідника файлів),
+    дозвіл вимикати екран і службу спеціальних можливостей «Vezha — вимкнення ТВ» (для таймера сну: вона лише вимикає
+    телевізор у задану хвилину й не читає вмісту екрана). Ці дозволи теж не призначені й не використовуються для передачі даних.</p>
+
+    <h2>7. Діти</h2>
+    <p>Застосунок Vezha не призначений для дітей до 13 років і свідомо не збирає їхніх даних. Батьківський контроль працює локально:
+    PIN зберігається лише на пристрої.</p>
+
+    <h2>8. Як видалити дані</h2>
+    <p>Видаліть застосунок або очистіть його дані в налаштуваннях Android — або скористайтеся пунктом «Скинути все» в
+    налаштуваннях Vezha. Записи й резервні копії, збережені поза застосунком (флешка, інша папка), видаляйте вручну.</p>
+    <p>Дані синхронізації Vezha+ на Google-диску: «Вимкнути на цьому пристрої» в налаштуваннях Vezha зупиняє синхронізацію;
+    щоб видалити саму приховану теку, відкрийте Google-диск у браузері → Налаштування → «Керування застосунками» → Vezha →
+    «Видалити приховані дані застосунку». Доступ Vezha до диска можна відкликати на myaccount.google.com → «Безпека» →
+    «Ваші підключення до сторонніх додатків і сервісів».</p>
+
+    <h2>9. Зміни політики</h2>
+    <p>Якщо політика зміниться, оновлена версія з новою датою з'явиться на цій сторінці.</p>
+
+    <h2>10. Контакти</h2>
+    <p>Питання щодо конфіденційності: <a href="mailto:yuriy.nedilsky@gmail.com">yuriy.nedilsky@gmail.com</a>
+    або кнопка «Написати розробнику» в налаштуваннях Vezha.</p>
+  </section>
+
+  <section id="en" lang="en">
+    <h1>Privacy policy</h1>
+    <p class="muted">Effective: November 23, 2026</p>
+
+    <div class="box">
+      <p><strong>In short:</strong> Vezha does not collect your data or send it to the developer, except to verify a Vezha+ purchase (section 2). There is no sign-up,
+      no ads, no developer analytics and no crash reporting. Everything you set up stays on your device. The developer only
+      receives emails that you choose to send. The only third-party collection is anonymous Google Cast statistics for
+      Chromecast (section 4).</p>
+    </div>
+
+    <h2>1. About the app</h2>
+    <p>Vezha is an IPTV player for Android, Android TV and TV boxes. The app <strong>does not contain or provide any channels</strong>:
+    it plays playlists (M3U/M3U8, Xtream Codes, Stalker / Ministra portals by MAC address) that you add yourself — from your
+    provider or from open sources.
+    This policy covers the Vezha app (<code>com.vezha.iptv</code>), developer — Yuriy Nedilsky.</p>
+
+    <h2>2. Data collected by the developer</h2>
+    <p>None automatically, except Vezha+ purchase verification (below). Vezha has no accounts, shows no ads, and contains no
+    analytics, trackers or crash-reporting services.</p>
+    <p>Vezha+ is bought through Google Play: Google processes the payment under its own terms, and the developer does not see
+    your payment details. If you bought Vezha+, the app sends the Google Play purchase token to the developer's server (Google
+    Cloud). The server asks Google whether the purchase is valid and which plan you have, and returns the answer to the app. The
+    server does not store the token; Google Cloud's technical log keeps only the request time and IP address for up to 30 days.
+    If you buy Lifetime while subscribed, the server cancels the subscription through Google Play and refunds the unused time.
+    The app remembers the result on the device.</p>
+    <p>If you choose to write to the developer ("Write to the developer" in settings opens your email app, or shows a QR code
+    with a ready email on a TV), the developer receives your email address, your message and the technical details at the end
+    of it: the Vezha version, the Android version and the device model. You can delete them before sending. The email is used
+    only to reply and fix bugs, is not shared with anyone, and you can ask for it to be deleted.</p>
+
+    <h2>3. What is stored on your device</h2>
+    <ul>
+      <li>Playlists: names and addresses, and for Xtream Codes — the server address, user name and password you entered; for
+        Stalker portals — the portal address, the MAC address, and the user name and password if the portal requires them.</li>
+      <li>The MAC address for Stalker portals. Vezha generates it once at random in the MAG set-top box range
+        (<code>00:1A:79:…</code>) — it is <strong>not</strong> your device's real hardware address. When adding a portal you can
+        replace it with the one your provider gave you.</li>
+      <li>TV guide links, favorite and recent channels, groups, appearance and language settings.</li>
+      <li>Parental control PIN.</li>
+      <li>Reminders and recordings you schedule from the TV guide.</li>
+      <li>Playlist and TV guide cache — so the app opens faster.</li>
+      <li>Channel recordings — only when you start recording; saved where you choose (device storage, a USB drive or a folder).</li>
+      <li>Settings backups — only when you create one; the file is saved where you choose and contains your playlists including
+        Xtream Codes logins and Stalker portal details (MAC address, user name, password), so keep it safe.</li>
+    </ul>
+    <p>None of this is sent to the developer. You can delete it at any time (see section 8).</p>
+
+    <h2>4. Internet connections</h2>
+    <p>To show channels, Vezha connects only to:</p>
+    <ul>
+      <li><strong>Servers from your playlists</strong> — to load the playlist, TV guide and channel logos and to play streams.
+        Your provider sees your IP address and requests just as with any other player; its own privacy policy applies.</li>
+      <li><strong>Stalker (Ministra) portals</strong> — to sign in, Vezha identifies itself to the portal as a MAG set-top box and
+        sends the MAC address from the playlist, a serial number and device ID derived from it, the time zone, and the user name
+        and password if you entered them. The portal recognizes your subscription by the MAC address. The temporary sign-in key
+        the portal issues is kept only in memory while the app is running. While you use the portal, Vezha periodically tells it
+        the connection is active (as a set-top box does) and stops after 30 minutes of inactivity. Your provider's privacy
+        policy applies to the portal.</li>
+      <li><strong>Built-in TV guide sources</strong> — TV guide files are downloaded from <code>raw.githubusercontent.com</code>
+        (an epg.one mirror) and <code>epgshare01.online</code>. None of your data is sent there; like any server, they see the
+        requesting IP address. The built-in TV guide can be turned off in settings.</li>
+      <li><strong>The public test playlist</strong> (<code>iptv-org.github.io</code>) — only if you choose it.</li>
+      <li><strong>Adding a playlist from your phone</strong> — while this window is open, the TV serves a temporary page on your
+        home network (it is prefilled with this device's MAC address for Stalker portals). Your phone sends the link, file or
+        sign-in details straight to the TV; nothing goes through the developer's servers.</li>
+      <li><strong>Chromecast (Google Cast)</strong> — when you start casting, the stream address, channel name, programme title
+        and logo are sent to your Chromecast on your home network, which opens the stream itself. For this Vezha includes the
+        Google Cast library (part of Google Play services); on devices with Google Play services it runs even when you are not
+        casting. According to Google, it collects <strong>anonymous</strong> data about using Cast devices (device discovery,
+        sessions, device model, library and app versions) with no identifiers that can be traced back to a user, sends it
+        encrypted to Google only, does not share it with third parties and uses it in aggregate to improve Cast. Neither the
+        developer nor users can turn this collection off or delete this data. Details:
+        <a href="https://developers.google.com/cast/docs/android_sender/data_disclosure">Google's description</a>.</li>
+      <li><strong>Vezha+ sync (Google Drive)</strong> — only if you turn it on in settings and allow access. Playlists (including
+        Xtream Codes logins and Stalker portal details — MAC address, user name and password), favorites, groups and list edits
+        are stored in a hidden Vezha folder in
+        <strong>your</strong> Google Drive (it doesn't appear among your files), along with the list of connected devices (name
+        and model). Vezha can access only this folder, not your other Drive files. Data travels encrypted directly between
+        the device and Google; the developer does not receive it and has no access to it. Google stores it under its
+        <a href="https://policies.google.com/privacy">privacy policy</a>.</li>
+    </ul>
+    <p>Requests carry a generic media player User-Agent and the headers specified in your playlist. Connections to
+    <code>http://</code> addresses are not encrypted — this depends on your provider.</p>
+
+    <h2>5. Android backup</h2>
+    <p>If device backup to your Google account is turned on, Android may store Vezha's settings there to restore them on a new
+    device. This backup is performed by Google, not by the developer; you can turn it off in Android settings.</p>
+
+    <h2>6. Permissions</h2>
+    <ul>
+      <li><strong>Internet</strong> — to load playlists and TV guides and to play channels.</li>
+      <li><strong>Read files</strong> (Android 12 and older) — to open a playlist or backup that you pick.
+        On newer Android versions files are opened with the system file picker.</li>
+      <li><strong>Notifications</strong> (Android 13 and newer) — programme reminders and the "Recording" notification.</li>
+      <li><strong>Alarms &amp; reminders</strong> — so reminders and scheduled recordings start on time even when Vezha is
+        closed.</li>
+      <li><strong>Start at boot</strong> — to restore the schedule of reminders and recordings.</li>
+      <li><strong>Background service and keeping the processor awake while recording</strong> — so a recording doesn't stop
+        when the app is minimized or closed. The service runs only while recording.</li>
+    </ul>
+    <p>The version installed outside Google Play (from GitHub) may additionally ask for "All files access" (for the file browser),
+    permission to turn off the screen and the "Vezha — TV power-off" accessibility service (for the sleep timer: it only turns
+    the TV off at the set time and does not read screen content). These permissions are not used to transfer any data either.</p>
+
+    <h2>7. Children</h2>
+    <p>Vezha is not intended for children under 13 and does not knowingly collect their data. Parental control works locally:
+    the PIN is stored only on the device.</p>
+
+    <h2>8. Deleting your data</h2>
+    <p>Uninstall the app or clear its data in Android settings — or use "Reset all" in Vezha's settings. Recordings and
+    backups saved outside the app (a USB drive, another folder) must be deleted manually.</p>
+    <p>Vezha+ sync data in Google Drive: "Turn off on this device" in Vezha's settings stops syncing; to delete the hidden folder
+    itself, open Google Drive in a browser → Settings → "Manage apps" → Vezha → "Delete hidden app data". You can revoke Vezha's
+    Drive access at myaccount.google.com → "Security" → "Your connections to third-party apps &amp; services".</p>
+
+    <h2>9. Changes</h2>
+    <p>If this policy changes, the updated version with a new date will be posted on this page.</p>
+
+    <h2>10. Contact</h2>
+    <p>Privacy questions: <a href="mailto:yuriy.nedilsky@gmail.com">yuriy.nedilsky@gmail.com</a>
+    or "Write to the developer" in Vezha's settings.</p>
+  </section>
+</main>
+</body>
+</html>
