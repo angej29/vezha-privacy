@@ -39,7 +39,7 @@
 
   <section id="uk" lang="uk">
     <h1>Політика конфіденційності</h1>
-    <p class="muted">Набуває чинності: 23 листопада 2026 р.</p>
+    <p class="muted">Набуває чинності: 25 листопада 2026 р.</p>
 
     <div class="box">
       <p><strong>Коротко:</strong> Vezha не збирає і не передає розробнику ваших даних, крім перевірки покупки Vezha+ (розділ 2). Немає реєстрації, реклами,
@@ -76,8 +76,10 @@
         (<code>00:1A:79:…</code>), — це <strong>не</strong> справжня апаратна адреса вашого пристрою. Під час додавання порталу
         її можна замінити тією, яку дав провайдер.</li>
       <li>Посилання на телепрограму, обрані й недавні канали, групи, налаштування оформлення та мови.</li>
-      <li>PIN батьківського контролю.</li>
-      <li>Заплановані нагадування й записи з телепрограми.</li>
+      <li>PIN батьківського контролю — лише у вигляді хешу (незворотного відбитка); самого PIN застосунок не зберігає.</li>
+      <li>Заплановані нагадування й записи з телепрограми. На ТВ недодивлений запис (назва передачі, канал, місце, де ви
+        зупинились) показується в «Продовжити перегляд» на головному екрані — це дані самого телевізора, нікуди не
+        передаються.</li>
       <li>Кеш плейлистів і телепрограми — щоб застосунок швидше відкривався.</li>
       <li>Записи каналів — лише коли ви вмикаєте запис; зберігаються у вибраному вами місці (пам'ять пристрою, флешка чи папка).</li>
       <li>Резервні копії налаштувань — лише коли ви їх створюєте; файл зберігається там, де ви вкажете, і містить ваші плейлисти
@@ -101,6 +103,10 @@
         (дзеркало epg.one) та <code>epgshare01.online</code>. Жодних ваших даних туди не надсилається; ці сервери, як і будь-які
         інші, бачать IP-адресу запиту. Вбудовану телепрограму можна вимкнути в налаштуваннях.</li>
       <li><strong>Відкритий тестовий плейлист</strong> (<code>iptv-org.github.io</code>) — лише якщо ви самі його оберете.</li>
+      <li><strong>Перевірка оновлень</strong> (лише версія з GitHub, не з Google Play) — раз на добу й коли ви відкриваєте «Про
+        Vezha», застосунок питає в <code>api.github.com</code>, чи є новіша збірка в публічному репозиторії
+        <code>angej29/vezha-releases</code>, а якщо ви натиснете «Оновити» — завантажує APK з <code>github.com</code>. Ваших даних
+        не надсилається; GitHub, як і будь-який сервер, бачить IP-адресу запиту.</li>
       <li><strong>Додавання плейлиста з телефона</strong> — поки відкрите це вікно, ТВ показує тимчасову сторінку у вашій домашній
         мережі (на ній підставлено MAC-адресу цього пристрою для порталів Stalker). Телефон надсилає посилання, файл чи дані
         входу прямо на ТВ; нічого не проходить через сервери розробника.</li>
@@ -124,9 +130,9 @@
     З'єднання за адресами <code>http://</code> не шифруються — це залежить від вашого провайдера.</p>
 
     <h2>5. Резервне копіювання Android</h2>
-    <p>Якщо на пристрої увімкнено резервне копіювання в обліковий запис Google, Android може зберегти там налаштування Vezha,
-    щоб відновити їх на новому пристрої. Це резервне копіювання здійснює Google, а не розробник; вимкнути його можна в
-    налаштуваннях Android.</p>
+    <p>Vezha вимикає для себе системне резервне копіювання Android: налаштування разом із логінами плейлистів не потрапляють
+    у резервну копію облікового запису Google і не копіюються через <code>adb backup</code>. Перенести їх на інший пристрій
+    можна власною резервною копією Vezha (файл, розділ 3) або синхронізацією Vezha+ (розділ 4).</p>
 
     <h2>6. Дозволи</h2>
     <ul>
@@ -166,7 +172,7 @@
 
   <section id="en" lang="en">
     <h1>Privacy policy</h1>
-    <p class="muted">Effective: November 23, 2026</p>
+    <p class="muted">Effective: November 25, 2026</p>
 
     <div class="box">
       <p><strong>In short:</strong> Vezha does not collect your data or send it to the developer, except to verify a Vezha+ purchase (section 2). There is no sign-up,
@@ -203,8 +209,10 @@
         (<code>00:1A:79:…</code>) — it is <strong>not</strong> your device's real hardware address. When adding a portal you can
         replace it with the one your provider gave you.</li>
       <li>TV guide links, favorite and recent channels, groups, appearance and language settings.</li>
-      <li>Parental control PIN.</li>
-      <li>Reminders and recordings you schedule from the TV guide.</li>
+      <li>Parental control PIN — only as a hash (a one-way fingerprint); the app does not store the PIN itself.</li>
+      <li>Reminders and recordings you schedule from the TV guide. On a TV, an unfinished recording (programme title, channel,
+        where you stopped) appears in "Continue watching" on the home screen — this stays on the TV and is not sent
+        anywhere.</li>
       <li>Playlist and TV guide cache — so the app opens faster.</li>
       <li>Channel recordings — only when you start recording; saved where you choose (device storage, a USB drive or a folder).</li>
       <li>Settings backups — only when you create one; the file is saved where you choose and contains your playlists including
@@ -227,6 +235,10 @@
         (an epg.one mirror) and <code>epgshare01.online</code>. None of your data is sent there; like any server, they see the
         requesting IP address. The built-in TV guide can be turned off in settings.</li>
       <li><strong>The public test playlist</strong> (<code>iptv-org.github.io</code>) — only if you choose it.</li>
+      <li><strong>Update check</strong> (GitHub version only, not Google Play) — once a day and when you open "About Vezha", the
+        app asks <code>api.github.com</code> whether a newer build is in the public <code>angej29/vezha-releases</code> repository,
+        and if you press "Update" it downloads the APK from <code>github.com</code>. None of your data is sent; like any server,
+        GitHub sees the requesting IP address.</li>
       <li><strong>Adding a playlist from your phone</strong> — while this window is open, the TV serves a temporary page on your
         home network (it is prefilled with this device's MAC address for Stalker portals). Your phone sends the link, file or
         sign-in details straight to the TV; nothing goes through the developer's servers.</li>
@@ -250,8 +262,9 @@
     <code>http://</code> addresses are not encrypted — this depends on your provider.</p>
 
     <h2>5. Android backup</h2>
-    <p>If device backup to your Google account is turned on, Android may store Vezha's settings there to restore them on a new
-    device. This backup is performed by Google, not by the developer; you can turn it off in Android settings.</p>
+    <p>Vezha turns off Android system backup for itself: settings, including playlist logins, are not stored in your Google
+    account backup and are not copied with <code>adb backup</code>. To move them to another device, use Vezha's own backup
+    (a file, section 3) or Vezha+ sync (section 4).</p>
 
     <h2>6. Permissions</h2>
     <ul>
